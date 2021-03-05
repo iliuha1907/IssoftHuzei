@@ -1,3 +1,3 @@
 # IssoftHuzei
 
-Published, what i have managed to do in the given time.
+Published, what i have managed to do during the given time.

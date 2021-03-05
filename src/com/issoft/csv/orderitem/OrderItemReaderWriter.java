@@ -1,8 +1,7 @@
-package com.issoft.csv;
+package com.issoft.csv.orderitem;
 
 import com.issoft.exception.BusinessException;
-import com.issoft.model.OrderItem;
-import com.issoft.model.Product;
+import com.issoft.model.orderitem.OrderItem;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -18,6 +17,7 @@ public class OrderItemReaderWriter {
 
     public static List<OrderItem> readItems() {
         try (BufferedReader reader = new BufferedReader(new FileReader(new File((FILE_NAME_IMPORT))))) {
+            reader.readLine();
             List<OrderItem> orderItems = new ArrayList<>();
             String line;
             while ((line = reader.readLine()) != null) {

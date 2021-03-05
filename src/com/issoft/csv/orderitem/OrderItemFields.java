@@ -1,4 +1,4 @@
-package com.issoft.csv;
+package com.issoft.csv.orderitem;
 
 public enum OrderItemFields {
 

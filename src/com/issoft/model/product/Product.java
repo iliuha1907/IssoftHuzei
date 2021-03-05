@@ -1,25 +1,25 @@
-package com.issoft.model;
+package com.issoft.model.product;
 
 import java.math.BigDecimal;
 import java.util.Objects;
 
 public class Product {
 
-    private Integer id;
+    private String id;
     private String name;
     private BigDecimal price;
 
-    public Product(Integer id, String name, BigDecimal price) {
+    public Product(String id, String name, BigDecimal price) {
         this.id = id;
         this.name = name;
         this.price = price;
     }
 
-    public Integer getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(String id) {
         this.id = id;
     }
 

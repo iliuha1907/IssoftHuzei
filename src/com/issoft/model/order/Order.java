@@ -1,31 +1,31 @@
-package com.issoft.model;
+package com.issoft.model.order;
 
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.Objects;
 
 public class Order {
 
-    private Integer id;
-    private Date date;
+    private String id;
+    private LocalDate date;
 
-    public Order(Integer id, Date date) {
+    public Order(String id, LocalDate date) {
         this.id = id;
         this.date = date;
     }
 
-    public Integer getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(String id) {
         this.id = id;
     }
 
-    public Date getDate() {
+    public LocalDate getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(LocalDate date) {
         this.date = date;
     }
 

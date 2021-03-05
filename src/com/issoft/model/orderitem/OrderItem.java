@@ -1,33 +1,32 @@
-package com.issoft.model;
+package com.issoft.model.orderitem;
 
 import java.util.Objects;
 
 public class OrderItem {
 
-    private Integer orderId;
-    private Integer productId;
+    private String orderId;
+    private String productId;
     private Integer quantity;
 
-
-    public OrderItem(Integer orderId, Integer productId, Integer quantity) {
+    public OrderItem(String orderId, String productId, Integer quantity) {
         this.orderId = orderId;
         this.productId = productId;
         this.quantity = quantity;
     }
 
-    public Integer getOrderId() {
+    public String getOrderId() {
         return orderId;
     }
 
-    public void setOrderId(Integer orderId) {
+    public void setOrderId(String orderId) {
         this.orderId = orderId;
     }
 
-    public Integer getProductId() {
+    public String getProductId() {
         return productId;
     }
 
-    public void setProductId(Integer productId) {
+    public void setProductId(String productId) {
         this.productId = productId;
     }
 

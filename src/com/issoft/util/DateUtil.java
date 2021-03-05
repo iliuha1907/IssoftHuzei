@@ -1,30 +1,13 @@
 package com.issoft.util;
 
-import com.issoft.exception.BusinessException;
-
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.TimeZone;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 public class DateUtil {
 
-    private static final String TIME_ZONE = "GMT";
-    private static SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-M-dd");
+    private static final DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("yyyy-M-dd'T'HH:mm[:ss]");
 
-    static {
-        simpleDateFormat.setTimeZone(TimeZone.getTimeZone(TIME_ZONE));
-    }
-
-    public static Date getDate(final String data) {
-        try {
-            return simpleDateFormat.parse(data);
-        } catch (ParseException ex) {
-            throw new BusinessException("Could not extract date", ex);
-        }
-    }
-
-    public static String getString(final Date date) {
-        return simpleDateFormat.format(date);
+    public static LocalDate getDate(final String data) {
+        return LocalDate.parse(data, FORMATTER);
     }
 }

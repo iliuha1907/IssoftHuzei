@@ -16,8 +16,7 @@ public class ProductReaderWriter {
     private static final String SEPARATOR = ",";
 
     public static List<Product> readProducts() {
-        try (BufferedReader reader = new BufferedReader(new FileReader(new File(
-                ProductReaderWriter.class.getClassLoader().getResource(FILE_NAME_IMPORT).getFile())))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader(new File((FILE_NAME_IMPORT))))) {
             List<Product> products = new ArrayList<>();
             String line;
             while ((line = reader.readLine()) != null) {

@@ -17,8 +17,7 @@ public class OrderReaderWriter {
     private static final String SEPARATOR = ",";
 
     public static List<Order> readOrders() {
-        try (BufferedReader reader = new BufferedReader(new FileReader(new File(
-                OrderReaderWriter.class.getClassLoader().getResource(FILE_NAME_IMPORT).getFile())))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader(new File((FILE_NAME_IMPORT))))) {
             List<Order> orders = new ArrayList<>();
             String line;
             while ((line = reader.readLine()) != null) {
